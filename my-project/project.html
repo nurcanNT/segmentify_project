@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
     <link rel="icon" href="sfy.png">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav>
         <h1 class="logo">Sizin için Seçtiklerimiz</h1>
     </nav>
     <div id="leftSide">
-        <ul>
+        <ul class="product-category">
             <li><a href="#">Size Özel</a></li>
             <li><a href="#">Tamir, Tadilat Gereçleri</a></li>
             <li><a href="#">Mobilya</a></li>
@@ -22,95 +26,98 @@
             <li><a href="#">Isıtma, Soğutma Sistemi</a></li>
         </ul>
     </div>
-    <section class="slider"></section>
-    <script src="main.js"></script>
-</------------------------------SLIDER--------------------------->
-
-<div id="rightSide">
-    <section class="product">
-        <h2 class="product-category"></h2>
-            <div id="pre-id">
-                <button class="pre-btn"><img src="https://mcdn01.gittigidiyor.net/64425/tn50/644256605_tn50_0.jpg" width="200" alt=""></button>
-                <p class="product-short-description">Pro Cat Plus x ST3250 Li Metal<br> Şanzımanlı Çift Akülü Şarjlı<br> Vidalama Matkap 2 Yıl Garantili</p>
-                    <div class="columns">
-                        <ul class="price">
-                            <li class="grey">159.90 TL</li>
-                            <li class="kargo">Ücretsiz Kargo</li>
-                            <li class="green"><a href="#" class="button">Sepete Ekle</a></li>
-                        </ul>
-                    </div>
-            </div>
-            <div id="nxt-id">
-                <button class="nxt-btn"><img src="https://mcdn01.gittigidiyor.net/63989/tn50/639891206_tn50_0.jpg" width="200" alt=""></button>
-                <p class="product-short-description">Violet 90*150 Rattan Plastik<br>Trend Lüx Camlı Masa Takımı <br>6 Sandalyeli</p>
-                <div class="columns">
-                    <ul class="price">
-                        <li class="grey">159.90 TL</li>
-                        <li class="kargo">Ücretsiz Kargo</li>
-                        <li class="green"><a href="#" class="button">Sepete Ekle</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="nxt-id">
-                <button class="nxt-btn"><img src="https://mcdn01.gittigidiyor.net/65048/tn50/650481341_tn50_0.jpg" width="200" alt=""></button>
-                <p class="product-short-description">Evony Elastik Kulaklı 3 Katlı<br> Cerrahi Maske <br>250 Adet</p>
-                <div class="columns">
-                    <ul class="price">
-                        <li class="grey">159.90 TL</li>
-                        <li class="kargo">Ücretsiz Kargo</li>
-                        <li class="green"><a href="#" class="button">Sepete Ekle</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="nxt-id">
-                <button class="nxt-btn"><img src="https://mcdn01.gittigidiyor.net/63891/tn50/638915004_tn50_0.jpg" width="200" alt=""></button>
-                <p class="product-short-description">Monster Abra<br>A5 V16.6.5 Dizüstü Bilgisayar<br> (Laptop)</p>
-                <div class="columns">
-                    <ul class="price">
-                        <li class="grey">159.90 TL</li>
-                        <li class="kargo">Ücretsiz Kargo</li>
-                        <li class="green"><a href="#" class="button">Sepete Ekle</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="nxt-id">
-                <button class="nxt-btn"><img src="https://mcdn01.gittigidiyor.net/57149/tn50/571494451_tn50_0.jpg" width="200" alt=""></button>
-                <p class="product-short-description">Raks Eco Jasper Vantilatör</p>
-                <div class="columns">
-                    <ul class="price">
-                        <li class="grey">159.90 TL</li>
-                        <li class="kargo">Ücretsiz Kargo</li>
-                        <li class="green"><a href="#" class="button">Sepete Ekle</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="nxt-id">
-                <button class="nxt-btn"><img src="https://mcdn01.gittigidiyor.net/64433/tn50/644338228_tn50_0.jpg" width="200" alt=""></button>
-                <p class="product-short-description">Pro Cat Plus ST3250LI <br>27 Pcs Setli Metal Şanjumanlı <br>Çift Akülü Darbeli Vidalama Matkap</p>
-                <div class="columns">
-                    <ul class="price">
-                        <li class="grey">159.90 TL</li>
-                        <li class="kargo">Ücretsiz Kargo</li>
-                        <li class="green"><a href="#" class="button">Sepete Ekle</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="product-container">
-            <div class="product-card">
-                <div class="product-image">
-                    <!-- <span class="discount-tag">50% off</span>
-                    <span style="font-size: 30px;cursor:pointer" onclick="openNav()">&#xf104; Menu</span>
-                    <button class="card-btn">add to</button> -->
-                </div>
-                <div class="product-info">
-                    <h2 class="product-brand">brand</h2>
-                    <!-- <p class="product-short-description">a short line about the product</p>
-                    <span class="price">$20</span><span class="actual-price">$40</span> -->
-                </div>
-            </div>
-
+    <section class="slider">
+        <!-- Swiper -->
+        <div class="swiper">
+            <div class="swiper-wrapper"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
-</div>
+    <script src="main.js"></script>
+    <!-- </------------------------------SLIDER--------------------------->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        function productList(category = "") {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "./data/product-list.json");
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    if ((this.status == 200) && (this.status < 300)) {
+                        var json = JSON.parse(this.responseText)
+                        console.log(json)
+                        var productCategory = json["responses"][0][0]["params"]["userCategories"]
+                        var categoryHtml = ""
+                        for (var key in productCategory) {
+                            var value = productCategory[key]
+                            categoryHtml += `<li><a href="javascript:productList('${value}')">${value}</a></li>`
+                        }
+                        document.getElementsByClassName("product-category")[0].innerHTML = categoryHtml
+                        if (json["responses"][0][0]["params"]["recommendedProducts"][category] == null) {
+                            alert("Bu kategori bulunmamaktadır.")
+                            return
+                        }
+                        var recommendedProducts = json["responses"][0][0]["params"]["recommendedProducts"][category]
+                        var productHtml = ""
+                        var products=[]
+                        for (var key in recommendedProducts) {
+                            var value = recommendedProducts[key]
+                            productHtml = `<div class="slide-container">
+                                                <div class="slide-content">
+                                                    <div class="card-wrapper">
+                                                        <div class="card">
+                                                            <div class="image-content">
+                                                                <span class="ovarlay"></span>
+
+                                                                <div class="card-image">
+                                                                    <img src="${value['image']}" alt="" class="card-img">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="card-content">
+                                                                <h4 class="name">${value['name']}</h4>
+                                                                <button class="button">${value['priceText']}</button>
+                                                                <p class="description">Ücretsiz Kargo</p>
+                                                                <button onlick="alert('Ürün Sepete Eklendi.')" class="button2">Sepete Ekle</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>`
+                                                products.push(productHtml)
+                        }
+                        console.log(this.responseText)
+                        let appendNumber = 600;
+                        let prependNumber = 1;
+                        const swiper = new Swiper('.swiper', {
+                            slidesPerView: 3,
+                            centeredSlides: true,
+                            spaceBetween: 30,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                type: 'fraction',
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            virtual: {
+                                slides: products,
+                            },
+                        });
+                    }
+                }
+            }
+
+        }
+        productList("Size Özel")
+    </script>
 </body>
+
 </html>
