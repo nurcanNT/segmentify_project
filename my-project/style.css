@@ -22,6 +22,14 @@
     margin-top: 200px;
 } 
 
+.custom-text-formatter h4{
+    white-space: nowrap; 
+    width: 200px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* border: 1px solid #000000; */
+}
+
 nav{
     position:relative; 
     background: white;
@@ -307,6 +315,7 @@ nav .logo{
     margin: 50px 500px;
     height: 100%;
     background-color: rgb(237, 235, 235);
+    flex-wrap: wrap;
 }
 .card{
     height: 100%;
@@ -323,6 +332,7 @@ nav .logo{
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
+    
 }
 .name{
     color: rgb(14, 13, 13);
@@ -377,6 +387,9 @@ nav .logo{
     background-color:#0a49f6 ;
 }
 
+
+
+
 @media only screen and (max-width: 600px) {
     .slider{
         float: none;
@@ -395,7 +408,90 @@ nav .logo{
     html,body{overflow: auto;}
 }
 
-@media only screen and (max-width:1200px){
+@media only screen and (max-width: 950px) {
+    .slider{
+        float: none;
+        width: 100%;
+        height: auto;
+        background-color:white;
+        z-index: 30;
+    }
+    #leftSide{
+        float: none;
+        width: 100%;
+        height: auto;
+        background-color:white;
+        z-index: 30;
+    }
+    html,body{overflow: auto;}
+} 
+
+/* ------------- */
+
+@media only screen and (max-width:1300px){
+    .slide-content{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .slide-container{
+        margin-bottom: 20px;
+        
+    }
+}
+@media only screen and (max-width:1288px){
+    .slide-content{
+        flex-basis: 90%;
+    }
+}
+@media only screen and (max-width:900px){
+    .slide-container{
+        flex-basis: 90%;
+    }
+
+}
+
+/* @media only screen and (max-width: 950px) {
+    .slide-container{
+        float: none;
+        width: 100%;
+        height: auto;
+        background-color:white;
+        z-index: 30;
+    }
+    .slide-content{
+        float: none;
+        width: 100%;
+        height: auto;
+        background-color:white;
+        z-index: 30;
+    }
+    html,body{overflow: auto;}
+} */
+/* @media only screen and (min-width: 350px) {
+    .slider{
+        float: none;
+        width: 100%;
+        height: auto;
+        background-color:white;
+        z-index: 30;
+    }
+    #leftSide{
+        float: none;
+        width: 100%;
+        height: auto;
+        background-color:white;
+        z-index: 30;
+    }
+    
+}  */
+
+
+/* ------------Responsive------------ */
+
+
+
+
+/* @media only screen and (max-width:1200px){
     .leftSide>.product-category{
         width: 100%;
     }
@@ -404,8 +500,78 @@ nav .logo{
     .image-content>.card-content{
         width: 100%;
     }
+} */
+
+/* @media screen and (min-width:560px) and (max-width:990px) {
+    .card{
+        height: 100%;
+        width: 540px;
+        border: 1px solid red;
+        margin: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+    .card-wrapper{
+        margin: 50px 500px;
+        /* height: 100%; *
+        background-color: rgb(237, 235, 235);
+        width: 900px;
+        height: 700px;
+        background: blue;
+        margin-bottom: 10px;
+    }
 }
-@media only screen and (max-width:870px){
+@media screen and (min-width:560px) and (max-width:990px) {
+    .swiper-slide{
+        height: 100%;
+        width: 540px;
+        border: 1px solid red;
+        margin: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+    .slide-container{
+        margin: 50px 500px;
+        /* height: 100%; *
+        background-color: rgb(237, 235, 235);
+        width: 900px;
+        height: 700px;
+        background: blue;
+        margin-bottom: 10px;
+    }
+} */
+
+/* @media screen and (min-width: 320px) and (max-width: 559px){
+    div.slide-container{
+        width: 300px;
+        border: 1px solid black;
+        margin: auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    div.slide-content{
+        width: 200px;
+        height: 600px;
+        background: orange;
+        margin-bottom: 10px;
+    }
+
+} */
+
+
+/* @media only screen and (max-width:870px){
     .slider{
         width: 98%;
     }
@@ -413,7 +579,7 @@ nav .logo{
         width: 50%;
     }
     
-}
+} */
 
 
 /* .product{

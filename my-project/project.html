@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <nav>
         <h1 class="logo">Sizin için Seçtiklerimiz</h1>
     </nav>
@@ -26,18 +27,17 @@
             <li><a href="#">Dizüstü Bilgisayar(Laptop)</a></li>
             <li><a href="#">Isıtma, Soğutma Sistemi</a></li>
         </ul>
+
     </div>
     <section class="slider">
-        <!-- Swiper -->
         <div class="swiper">
-            <div class="swiper-wrapper"></div>
-            <!-- Add Pagination -->
+            <div style= "word-wrap: break-word" class="swiper-wrapper"></div>
             <div class="swiper-pagination"></div>
-            <!-- Add Arrows -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
     </section>
+
     <script src="main.js"></script>
     <!-- </------------------------------SLIDER--------------------------->
 
@@ -66,13 +66,14 @@
                         }
                         var recommendedProducts = json["responses"][0][0]["params"]["recommendedProducts"][category]
                         var productHtml = ""
-                        var products=[]
+                        var products = []
                         for (var key in recommendedProducts) {
                             var value = recommendedProducts[key]
+                            consol.log
                             productHtml = `<div class="slide-container">
                                                 <div class="slide-content">
                                                     <div class="card-wrapper">
-                                                        <div class="card">
+                                                        <div class="card ">
                                                             <div class="image-content">
                                                                 <span class="ovarlay"></span>
 
@@ -81,7 +82,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="card-content">
+                                                            <div class="card-content custom-text-formatter">
                                                                 <h4 class="name">${value['name']}</h4>
                                                                 <div class="card-button">
                                                                     <button class="button">${value['priceText']}</button>
@@ -93,7 +94,7 @@
                                                         </div>
                                                     </div>
                                                 </div>`
-                                                products.push(productHtml)
+                            products.push(productHtml)
                         }
                         console.log(this.responseText)
                         let appendNumber = 600;
