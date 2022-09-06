@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale, maximum-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project</title>
@@ -82,9 +83,11 @@
 
                                                             <div class="card-content">
                                                                 <h4 class="name">${value['name']}</h4>
-                                                                <button class="button">${value['priceText']}</button>
-                                                                <p class="description">Ücretsiz Kargo</p>
-                                                                <button onlick="alert('Ürün Sepete Eklendi.')" class="button2">Sepete Ekle</button>
+                                                                <div class="card-button">
+                                                                    <button class="button">${value['priceText']}</button>
+                                                                    <p class="description"><img src="kargo.png" alt="" class="description-img">Ücretsiz Kargo</p>
+                                                                    <button onlick="alert('Ürün Sepete Eklendi.')" class="button2">Sepete Ekle</button>
+                                                                </div>
                                                             </div>
 
                                                         </div>
