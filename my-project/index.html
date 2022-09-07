@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
 
 <style>
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -16,7 +17,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(185, 4, 4);
+    background-color: rgba(185, 4, 4, 0.939);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -49,7 +50,7 @@
 </style>
 </head>
 <body>
-
+<div class="menu-res">
     <div id="YanMenu" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
         &times;</a>
@@ -57,12 +58,12 @@
         <a href="project.html">My Project</a>
     </div>
 
-    <span style="font-size: 30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+    <span style="font-size: 30px;cursor:pointer;padding: 1%;" onclick="openNav()">&#9776; Menu</span>
    
     <div class="sfy">
         <img src="segmentify.png" alt="segmentify">
     </div>
-
+</div>
     <script src="main.js"></script>
 </body>
 </html>

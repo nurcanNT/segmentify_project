@@ -1,3 +1,4 @@
+//menu
 function openNav(){
     document.getElementById("YanMenu").style.width = "250px";
 }

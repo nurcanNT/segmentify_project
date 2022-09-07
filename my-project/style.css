@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .body{
-    
+
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -15,23 +15,15 @@
     background-color: #EFEFEF;
 }
 
-
 .sfy{
     justify-content: center;
     display: flex;
     margin-top: 200px;
-} 
-
-.custom-text-formatter h4{
-    white-space: nowrap; 
-    width: 200px; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* border: 1px solid #000000; */
 }
 
+
 nav{
-    position:relative; 
+    position:relative;
     background: white;
     width: 100%;
     height: 80px;
@@ -47,7 +39,7 @@ nav .logo{
     padding: 0 3rem;
     font-family: sans-serif;
     margin-top: 70px;
-    
+
 }
 .swiper {
     width: 100%;
@@ -113,10 +105,10 @@ nav .logo{
     list-style: none;
     padding: 15px 15px;
     cursor: pointer;
-    
+
 }
 #leftSide ul li:hover{
-    background-color: rgb(218, 237, 250); 
+    background-color: rgb(218, 237, 250);
     border-radius: 3px;
     border-left-style: solid;
     border-width: 4px;
@@ -131,7 +123,7 @@ nav .logo{
     font-family: sans-serif;
     text-decoration: none;
     font-size: large;
-    
+
 }
 #rightSide{
     position:fixed;
@@ -147,7 +139,7 @@ nav .logo{
     padding: 10px;
     display: flexbox;
     float: right;
-    
+
 }
 .product-category{
     font-size: 10px;
@@ -155,8 +147,8 @@ nav .logo{
     margin-bottom: 40px;
     text-transform: capitalize;
     margin: 40px;
-    
-    
+
+
 }
 #pre-id{
     float: left;
@@ -185,7 +177,7 @@ nav .logo{
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    
+
 }
 .product-container::-webkit-scrollbar{
     display: none;
@@ -234,7 +226,7 @@ nav .logo{
 }
 .product-short-description {
     font-family: sans-serif;
-    font-weight: 600;  
+    font-weight: 600;
 }
 .columms{
     float:left;
@@ -247,7 +239,7 @@ nav .logo{
     padding: 0;
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    
+
 }
 .price:hover {
     box-shadow: 0.8px 12px 0 rgba(0,0,0,0.2);
@@ -286,28 +278,18 @@ nav .logo{
     border-radius: 20%;
     margin-left: 1px;
     padding: 4px 4px;
-    
+
 }
 .card-image .card-img{
-    
+
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 5%;
     border: 4px solid #f4f4f4;
 }
+/* ----------------Slider---------------- */
 
-    /*------------ Ellipsis------------- */
-.card-content  {
-    white-space: nowrap; 
-    height: 300px;
-    overflow:hidden;
-    text-overflow: ellipsis;
-    text-align: left;
-}
-.card-button{
-    margin-top: 40px;
-}
 .slide-container{
     height: 100%;
 }
@@ -321,7 +303,7 @@ nav .logo{
     height: 100%;
     width: 270px;
     border-radius: 10px;
-    
+
 }
 .card-wrapper{
     height: 100%;
@@ -332,11 +314,32 @@ nav .logo{
     flex-direction: column;
     align-items: center;
     padding: 10px 14px;
-    
 }
+.card-button{
+    margin-top: 40px;
+}
+
 .name{
     color: rgb(14, 13, 13);
 }
+
+/*------------ Ellipsis------------- */
+
+.custom-text-formatter h4{
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* border: 1px solid #a5a7ef; */
+}
+.card-content  {
+    white-space: nowrap;
+    height: 300px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
 /*------------ ücretsiz kargo---------- */
 .description{
     font-size: 17px;
@@ -348,7 +351,6 @@ nav .logo{
     width: 30px;
     height: 15px;
     padding-right: 4px;
-    
 
 }
 .image-content{
@@ -357,12 +359,12 @@ nav .logo{
 .button{
     border: none;
     font-size: 20px;
-    font-family: sans-serif; 
+    font-family: sans-serif;
     color: rgb(45, 45, 45);
     padding: 25px 180px;
     padding-left: 40px;
     background-color:rgb(210, 208, 208);
-    
+
     margin: 10px;
     cursor:pointer;
     transition: all 0.2s ease;
@@ -374,21 +376,21 @@ nav .logo{
 .button2{
     border: none;
     font-size: 20px;
-    font-family: sans-serif; 
+    font-family: sans-serif;
     color: #FFF;
     padding: 7px 60px;
     background-color: #4070F4;
     border-radius: 6px;
     margin: 20px;
     margin-left: 50px ;
-    
+
 }
 .button2:hover{
     background-color:#0a49f6 ;
 }
 
 
-
+/* -----------Responsive sol taraf---------- */
 
 @media only screen and (max-width: 600px) {
     .slider{
@@ -424,18 +426,18 @@ nav .logo{
         z-index: 30;
     }
     html,body{overflow: auto;}
-} 
+}
 
-/* ------------- */
+/* ------Responsive sağ taraf ------- */
 
-@media only screen and (max-width:1300px){
+/* @media only screen and (max-width:1300px){
     .slide-content{
         width: 100%;
         margin-bottom: 30px;
     }
     .slide-container{
         margin-bottom: 20px;
-        
+
     }
 }
 @media only screen and (max-width:1288px){
@@ -443,11 +445,74 @@ nav .logo{
         flex-basis: 90%;
     }
 }
-@media only screen and (max-width:900px){
+@media only screen and (max-width:910px){
     .slide-container{
         flex-basis: 90%;
     }
+}
+@media only screen and (max-width:1280px){
+    .slide-content{
+        flex-basis: 90%;
+        left: 100%;
+    }
+}
 
+@media only screen and (max-width:850px){
+    .slide-content{
+        flex-basis: 90%;
+        left: 100%;
+    }
+} */
+@media only screen and (max-width:450px){
+    .swiper-slide{
+        flex-basis: 100%;
+        left: 70%;
+    }
+}
+@media only screen and (max-width:950px){
+    .swiper-slide{
+        flex-basis: 50%;
+        left: 10%;
+        padding-right: 1px;
+    }
+}
+@media only screen and (max-width:350px) and (max-width:550px) {
+    .swiper-slide{
+        flex-basis: 50%;
+        left: 50%;
+        padding-right: 10px;
+        margin-right: 50px;
+    }
+}
+@media only screen and (max-width:1280px){
+    .swiper-slide{
+        flex-basis: 50%;
+        left: 10%;
+        padding-right: 80%;
+    }
+}
+
+/* ----------Giriş responsive------- */
+@media only screen and (max-width:500px){
+    .menu-res{
+        flex-basis: 50%;
+        left: 10%;
+        padding-right: 80%;
+    }
+}
+@media only screen and (max-width:410px){
+    .sfy{
+        flex-basis: 10%;
+        position: absolute;
+    }
+}
+@media only screen and (max-width:800px){
+    .menu-res{
+        flex-basis: 50%;
+        left: 10%;
+        
+        position: absolute;
+    }
 }
 
 /* @media only screen and (max-width: 950px) {
@@ -482,11 +547,11 @@ nav .logo{
         background-color:white;
         z-index: 30;
     }
-    
+
 }  */
 
 
-/* ------------Responsive------------ */
+/* ------------Responsive deneme------------ */
 
 
 
@@ -578,15 +643,16 @@ nav .logo{
     .slider> .swiper-slide> .image-content> .card-content{
         width: 50%;
     }
-    
+
 } */
 
+/* ------farklı slider tasarımı----- */
 
 /* .product{
     position: relative;
     overflow: hidden;
     padding: 10px;
-    
+
 }
 .product-category{
     padding: 0 10vw;
@@ -701,7 +767,7 @@ nav .logo{
 }
 .pre-btn:hover img,
 .nxt-btn:hover img {
-   opacity: 1; 
+   opacity: 1;
 }
 .collection-container{
     width: 100%;

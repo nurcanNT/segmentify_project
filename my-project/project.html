@@ -39,6 +39,7 @@
     </section>
 
     <script src="main.js"></script>
+
     <!-- </------------------------------SLIDER--------------------------->
 
     <!-- Swiper JS -->
@@ -52,25 +53,31 @@
                 if (this.readyState === 4) {
                     if ((this.status == 200) && (this.status < 300)) {
                         var json = JSON.parse(this.responseText)
-                        console.log(json)
-                        var productCategory = json["responses"][0][0]["params"]["userCategories"]
-                        var categoryHtml = ""
-                        for (var key in productCategory) {
-                            var value = productCategory[key]
-                            categoryHtml += `<li><a href="javascript:productList('${value}')">${value}</a></li>`
+                        // console.log(json)
+                        var productCategory = json["responses"][0][0]["params"]["userCategories"] //datada sekme başlıklarına ulaşılarak productCategory değişkenine çekildi
+                        var categoryHtml = ""  //yeni değişken
+                        for (var key in productCategory) { 
+                            var value = productCategory[key]  // çekilen değerler value değişkenine atandı
+                            categoryHtml += `<li><a href="javascript:productList('${value}')">${value}</a></li>` //yeni değişkene ürün değerleri eklenir
                         }
                         document.getElementsByClassName("product-category")[0].innerHTML = categoryHtml
-                        if (json["responses"][0][0]["params"]["recommendedProducts"][category] == null) {
+                        if (json["responses"][0][0]["params"]["recommendedProducts"][category] == null) { //null kontrol
                             alert("Bu kategori bulunmamaktadır.")
                             return
                         }
-                        var recommendedProducts = json["responses"][0][0]["params"]["recommendedProducts"][category]
+                        var recommendedProducts = json["responses"][0][0]["params"]["recommendedProducts"][category] //sekmelerde bulanan ürünler
                         var productHtml = ""
                         var products = []
                         for (var key in recommendedProducts) {
                             var value = recommendedProducts[key]
-                            consol.log
-                            productHtml = `<div class="slide-container">
+                            console.log(value)       
+                            var shippingFeeHtml =`<p class="description"></p>` //ücretsiz kargo için
+                            if(value["params"]["shippingFee"]=="FREE"){   //deneme için ilk data(matkap)'nın shippingFee değeri değiştirildi
+                                shippingFeeHtml = `<p class="description"><img src="kargo.png" alt="" class="description-img">Ücretsiz Kargo</p> `
+
+                            }
+                            //slider bölümüne ürünler çekildi
+                            productHtml = `<div class="slide-container"> 
                                                 <div class="slide-content">
                                                     <div class="card-wrapper">
                                                         <div class="card ">
@@ -83,10 +90,10 @@
                                                             </div>
 
                                                             <div class="card-content custom-text-formatter">
-                                                                <h4 class="name">${value['name']}</h4>
+                                                                <h4 class="name">${value['name']}</h4> 
                                                                 <div class="card-button">
                                                                     <button class="button">${value['priceText']}</button>
-                                                                    <p class="description"><img src="kargo.png" alt="" class="description-img">Ücretsiz Kargo</p>
+                                                                    ${shippingFeeHtml}
                                                                     <button onlick="alert('Ürün Sepete Eklendi.')" class="button2">Sepete Ekle</button>
                                                                 </div>
                                                             </div>
@@ -94,9 +101,9 @@
                                                         </div>
                                                     </div>
                                                 </div>`
-                            products.push(productHtml)
+                            products.push(productHtml) //ürünler push'landı
                         }
-                        console.log(this.responseText)
+                        // console.log(this.responseText)
                         let appendNumber = 600;
                         let prependNumber = 1;
                         const swiper = new Swiper('.swiper', {
